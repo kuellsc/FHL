@@ -1,0 +1,19 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="http://www.uhydro.de">Hydrology</a></li>
+      after: |
+        <li><a href="https://github.com/kuellsc/THL" target="blank">Published</a></li>
+    edit: https://github.com/kuellsc/THL/edit/master/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  template: null
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  pandoc_args: --top-level-division=chapter
+bookdown::epub_book: default
